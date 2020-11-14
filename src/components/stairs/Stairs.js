@@ -10,7 +10,7 @@ import ButtonGroup from "../buttonGroup/ButtonGroup";
 
 import CustomChatbot from "../chatbot/CustomChatbot";
 
-class Pizza extends Component {
+class Stairs extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -68,4 +68,4 @@ class Pizza extends Component {
   }
 }
 
-export default Pizza;
+export default Stairs;
