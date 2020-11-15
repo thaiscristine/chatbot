@@ -14,7 +14,7 @@ function ButtonGroup(props) {
             props.eventHandler("tomato");
           }}
         >
-          Add/Remove Tomato
+          Step 1
         </button>
       </div>
 
@@ -26,7 +26,7 @@ function ButtonGroup(props) {
             props.eventHandler("mushroom");
           }}
         >
-          Add/Remove Mushroom
+          Step 2
         </button>
       </div>
 
@@ -38,7 +38,7 @@ function ButtonGroup(props) {
             props.eventHandler("corn");
           }}
         >
-          Add/Remove Corn
+          Step 3
         </button>
       </div>
 
@@ -50,7 +50,7 @@ function ButtonGroup(props) {
             props.eventHandler("veggie");
           }}
         >
-          Add/Remove Veggie
+          Step 4
         </button>
       </div>
     </div>
