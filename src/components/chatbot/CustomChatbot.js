@@ -40,129 +40,81 @@ function CustomChatbot(props) {
         {
           value: "mei",
           label: "Mei",
-          trigger: "perguntar ramo mei"
+          trigger: () => {
+              props.eventHandler("mei");
+              return "perguntar ramo"
+          }
         },
         {
           value: "microempresa",
           label: "Microempresa",
-          trigger: "perguntar ramo micro"
+          trigger: () => {
+              props.eventHandler("micro");
+              return "perguntar ramo"
+          }
         },
            {
           value: "media",
           label: "Média",
-          trigger: "perguntar ramo media"
+          trigger: () => {
+              props.eventHandler("média");
+              return "perguntar ramo"
+          }
         }
       ]
     },
       {
-       id: "perguntar ramo mei",
-       message: "Em qual ramo a sua empresa mei se encaixa?",
-       trigger: "mostrar ramo mei"
+       id: "perguntar ramo",
+       message: "{previousValue}, Em qual ramo a sua empresa se encaixa?",
+       trigger: "mostrar ramo"
     },
 
     {
-       id: "mostrar ramo mei",
+       id: "mostrar ramo",
        options: [
         {
           value: 'comercio',
           label: "Comércio",
-          trigger: "montar programa comércio mei"
+          trigger: "programa"
         },
         {
           value: "industria",
-          label: "industria",
-          trigger: "montar programa indústria mei"
+          label: "indústria",
+          trigger: "programa"
         },
            {
           value: "servicos",
           label: "serviços",
-          trigger: "montar programa serviços mei"
+          trigger: "programa"
         }
       ]
-    },
-            {
-       id: "perguntar ramo micro",
-       message: "Em qual ramo a sua empresa micro se encaixa?",
-       trigger: "mostrar ramo micro"
     },
 
-    {
-       id: "mostrar ramo micro",
-       options: [
-        {
-          value: 'comercio',
-          label: "Comércio",
-          trigger: "montar programa comercio micro"
-        },
-        {
-          value: "industria",
-          label: "industria",
-          trigger: "montar programa industria micro"
-        },
-           {
-          value: "servicos",
-          label: "serviços",
-          trigger: "montar programa serviços micro"
-        }
-      ]
+      {
+       id: "programa",
+       message: "{previousValue}, Vamos montar a estrategia agora[...]",
+       trigger: "perguntar renda"
     },
       {
-       id: "perguntar ramo media",
-       message: "Em qual ramo a sua empresa media se encaixa?",
-       trigger: "mostrar ramo media"
+       id: "perguntar renda",
+       message: "Qual foi sua receita total no último mês?",
+       trigger: "resposta renda"
     },
-
-    {
-       id: "mostrar ramo media",
-       options: [
-        {
-          value: 'comercio',
-          label: "Comércio",
-          trigger: "montar programa comercio media"
-        },
-        {
-          value: "industria",
-          label: "industria",
-          trigger: "montar programa industria media"
-        },
-           {
-          value: "servicos",
-          label: "serviços",
-          trigger: "montar programa serviços media"
-        }
-      ]
+      //(precisa ajeitar para só deixar user digitar números)
+      {
+       id: "resposta renda",
+       user: true,
+       trigger: "checar renda"
     },
       {
-       id: "montar programa comércio mei",
-       message: "Vamos montar a estrategia agora[...]",
-       trigger: "mostrar ramo media"
+       id: "checar renda",
+       message: "{previousValue}",
+       trigger: "Done"
     },
-    {
-       id: "mostrar ramo media",
-       options: [
-        {
-          value: 'comercio',
-          label: "Comércio",
-          trigger: "Done"
-        },
-        {
-          value: "industria",
-          label: "industria",
-          trigger: "Done"
-        },
-           {
-          value: "servicos",
-          label: "serviços",
-          trigger: "Done"
-        }
-      ]
-    },
-
-
 
       {
       id: "Done",
-      message: "Tenha um ótimo dia",
+      message: "😂😂😂😂 se vira ae falido kkkkk 😂😂😂😂",
       end: true
     }
   ];

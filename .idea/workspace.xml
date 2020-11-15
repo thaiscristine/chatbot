@@ -56,6 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605399138249</updated>
       <workItem from="1605399143781" duration="11775000" />
+      <workItem from="1605444850448" duration="7446000" />
     </task>
     <servers />
   </component>
@@ -95,9 +96,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1605399254951" />
-    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605402053436">
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605457077091">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1605402053436" />
+    <state x="500" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1605457077091" />
+    <state x="0" y="0" width="585" height="728" key="find.popup" timestamp="1605457291374">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" width="585" height="728" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1605457291374" />
   </component>
 </project>
