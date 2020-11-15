@@ -1,12 +1,11 @@
 import React from "react";
+import bars from '../../assets/bars.png';
+import { BarsBackground } from './style';
 
 function Base() {
   return (
     <div>
-      <div className="pizza-base-1" />
-      <div className="pizza-base-2" />
-      <div className="slice-base-1" />
-      <div className="slice-base-2" />
+      <BarsBackground />
     </div>
   );
 }

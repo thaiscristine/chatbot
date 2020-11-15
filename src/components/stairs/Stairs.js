@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./Pizza.css";
+import "./Stairs.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Base from "../base/Base";
-import Tomato from "../tomato/Tomato";
+import Step1 from "../step1/Step1";
 import Mushroom from "../mushroom/Mushroom";
 import Corn from "../corn/Corn";
 import Veggie from "../veggie/Veggie";
@@ -42,7 +42,7 @@ class Stairs extends Component {
   };
 
   render() {
-    const tomato = this.state.tomato && <Tomato />;
+    const tomato = this.state.tomato && <Step1 />;
     const mushroom = this.state.mushroom && <Mushroom />;
     const corn = this.state.corn && <Corn />;
     const veggie = this.state.veggie && <Veggie />;
