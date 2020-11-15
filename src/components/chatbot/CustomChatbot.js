@@ -21,163 +21,122 @@ function CustomChatbot(props) {
       height: "400px",
       floating: true
   };
-  
+
+  //dialogue goes here
   const steps = [
     {
-       id: "Greet",
-       message: "Hello, Welcome to our shop",
-       trigger: "Ask Name"
+       id: "Saudações",
+       message: "Olá, sou a  LIA[...]",
+       trigger: "Perguntar categoria"
     },
     {
-       id: "Ask Name",
-       message: "Please type your name?",
-       trigger: "Waiting user input for name"
+       id: "Perguntar categoria",
+       message: "Em qual categoria a sua empresa se encaixa?",
+       trigger: "Escolher categoria"
     },
     {
-       id: "Waiting user input for name",
-       user: true,
-       trigger: "Asking options to eat"
-    },
-    {
-       id: "Asking options to eat",
-       message: "Hi {previousValue}, Please click on what you want to eat!",
-       trigger: "Displaying options to eat"
-    },
-    {
-       id: "Displaying options to eat",
+       id: "Escolher categoria",
        options: [
         {
-          value: "pizza",
-          label: "Pizza",
-          trigger: "Asking for Tomatoes in Pizza"
+          value: "mei",
+          label: "Mei",
+          trigger: "perguntar ramo mei"
         },
-        { 
-          value: "burger",
-          label: "Burger",
-          trigger: "Burger Not available"
-        } 
-      ]
-    },
-    {
-       id: "Burger Not available",
-       message: "Sorry, We don't have burger available at the moment. Would you like to try our pizza?",
-       trigger: "Asking for pizza after burger"
-    },
-    {
-       id: "Asking for pizza after burger",
-       options: [
         {
-          value: true,
-          label: "Yes",
-          trigger: "Asking for Tomatoes in Pizza"
+          value: "microempresa",
+          label: "Microempresa",
+          trigger: "perguntar ramo micro"
         },
-        { 
-          value: "false",
-          label: "No",
-          trigger: "Done"
-        } 
+           {
+          value: "media",
+          label: "Média",
+          trigger: "perguntar ramo media"
+        }
       ]
     },
-    {
-       id: "Asking for Tomatoes in Pizza",
-       message: "Would you like to have tomatoes in your pizza",
-       trigger: "Adding Tomatoes in Pizza"
-    },
-    {
-       id: "Adding Tomatoes in Pizza",
-       options: [
-        {
-          value: true,
-          label: "Yes",
-          trigger: () => {
-              props.eventHandler("tomato");
-              return "Asking for Mushroom in Pizza"  
-            }
-        },
-        { 
-          value: "false",
-          label: "No",
-          trigger: "Asking for Mushroom in Pizza"
-        } 
-      ]
-    },
-    
-    {
-       id: "Asking for Mushroom in Pizza",
-       message: "Would you like to have mushroom in your pizza",
-       trigger: "Adding Mushroom in Pizza"
-    },
-
-    {
-       id: "Adding Mushroom in Pizza",
-       options: [
-        {
-          value: true,
-          label: "Yes",
-          trigger: () => {
-              props.eventHandler("mushroom");
-              return "Asking for Corn in Pizza"  
-            }
-        },
-        { 
-          value: "false",
-          label: "No",
-          trigger: "Asking for Corn in Pizza"
-        } 
-      ]
-    },
-    {
-       id: "Asking for Corn in Pizza",
-       message: "Would you like to have corn in your pizza",
-       trigger: "Adding Corn in Pizza"
-    },
-
-    {
-       id: "Adding Corn in Pizza",
-       options: [
-          {
-            value: true,
-            label: "Yes",
-            trigger: () => {
-                props.eventHandler("corn");
-                return "Asking for Veggies in Pizza"  
-              }
-          },
-          { 
-            value: "false",
-            label: "No",
-            trigger: "Asking for Veggies in Pizza"
-          } 
-      ]
-    },
-     
-    {
-       id: "Asking for Veggies in Pizza",
-       message: "Would you like to have veggies in your pizza",
-       trigger: "Adding Veggies in Pizza"
-    },
-
-    {
-      id: "Adding Veggies in Pizza",
-      options: [
       {
-          value: true,
-          label: "Yes",
-          trigger: () => {
-              props.eventHandler("veggie");
-              return "Done"  
-            }
+       id: "perguntar ramo mei",
+       message: "Em qual ramo a sua empresa mei se encaixa?",
+       trigger: "mostrar ramo mei"
+    },
+
+    {
+       id: "mostrar ramo mei",
+       options: [
+        {
+          value: 'comercio',
+          label: "Comércio",
+          trigger: "montar programa comércio mei"
         },
-        { 
-          value: "false",
-          label: "No",
-          trigger: "Done"
-        } 
+        {
+          value: "industria",
+          label: "industria",
+          trigger: "montar programa indústria mei"
+        },
+           {
+          value: "servicos",
+          label: "serviços",
+          trigger: "montar programa serviços mei"
+        }
       ]
     },
+            {
+       id: "perguntar ramo micro",
+       message: "Em qual ramo a sua empresa micro se encaixa?",
+       trigger: "mostrar ramo micro"
+    },
+
     {
+       id: "mostrar ramo micro",
+       options: [
+        {
+          value: 'comercio',
+          label: "Comércio",
+          trigger: "montar programa comercio micro"
+        },
+        {
+          value: "industria",
+          label: "industria",
+          trigger: "montar programa industria micro"
+        },
+           {
+          value: "servicos",
+          label: "serviços",
+          trigger: "montar programa serviços micro"
+        }
+      ]
+    },
+            {
+       id: "perguntar ramo media",
+       message: "Em qual ramo a sua empresa media se encaixa?",
+       trigger: "mostrar ramo media"
+    },
+
+    {
+       id: "mostrar ramo media",
+       options: [
+        {
+          value: 'comercio',
+          label: "Comércio",
+          trigger: "montar programa comercio media"
+        },
+        {
+          value: "industria",
+          label: "industria",
+          trigger: "montar programa industria media"
+        },
+           {
+          value: "servicos",
+          label: "serviços",
+          trigger: "montar programa serviços media"
+        }
+      ]
+    },
+
+
+      {
       id: "Done",
-      message: "Have a great day !!",
+      message: "Tenha um ótimo dia",
       end: true
     }
   ];
