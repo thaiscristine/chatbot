@@ -1,11 +1,11 @@
 import React from "react";
-import { Step1BarStyle, Step2BarStyle, Step3BarStyle } from '../elements/style';
+import { Avatar3, Step1BarStyle, Step3BarStyle } from '../elements/style';
 
 function Step3() {
   return (
     <div>
+        <Avatar3 />
         <Step1BarStyle />
-        <Step2BarStyle />
         <Step3BarStyle />
     </div>
   );
