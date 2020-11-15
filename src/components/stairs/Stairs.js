@@ -21,16 +21,16 @@ class Stairs extends Component {
     };
   }
 
-  clickEventHandler = ingredient => {
-    if (ingredient === "tomato") {
+  clickEventHandler = decision => {
+    if (decision === "tomato") {
       this.setState({
         tomato: !this.state.tomato
       });
-    } else if (ingredient === "mushroom") {
+    } else if (decision === "mushroom") {
       this.setState({
         mushroom: !this.state.mushroom
       });
-    } else if (ingredient === "corn") {
+    } else if (decision === "corn") {
       this.setState({
         corn: !this.state.corn
       });
