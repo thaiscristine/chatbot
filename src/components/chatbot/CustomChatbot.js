@@ -119,7 +119,7 @@ function CustomChatbot(props) {
       {
        id: "renda positiva",
        message: "{previousValue}, renda positiva",
-       trigger: "Done"
+       trigger: "pergunta saude financeira 1"
     },
       {
        id: "renda negativa",
@@ -131,6 +131,33 @@ function CustomChatbot(props) {
        message: "{previousValue}, não entendi. Digite somente um número, pos ou neg",
        trigger: "perguntar renda"
     },
+      {
+       id: "pergunta saude financeira 1",
+       message: "você economiza?",
+       trigger: "resposta 1"
+    },
+      {
+       id: "resposta 1",
+       options: [
+        {
+          value: 'sim',
+          label: "Sim",
+          trigger: () => {
+              props.eventHandler("pratica2");
+              return "Done"
+          }
+        },
+        {
+          value: "nao",
+          label: "Não",
+          trigger: () => {
+              props.eventHandler("zero");
+              return "Done"
+          }
+        },
+      ]
+    },
+
 
       {
       id: "Done",
