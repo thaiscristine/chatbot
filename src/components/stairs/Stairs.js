@@ -3,9 +3,9 @@ import "./Stairs.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Base from "../base/Base";
 import Step1 from "../step1/Step1";
-import Mushroom from "../mushroom/Mushroom";
-import Corn from "../corn/Corn";
-import Veggie from "../veggie/Veggie";
+import Step2 from "../step2/Step2";
+import Step3 from "../step3/Step3";
+import Step4 from "../step4/Step4";
 import ButtonGroup from "../buttonGroup/ButtonGroup";
 
 import CustomChatbot from "../chatbot/CustomChatbot";
@@ -43,9 +43,9 @@ class Stairs extends Component {
 
   render() {
     const tomato = this.state.tomato && <Step1 />;
-    const mushroom = this.state.mushroom && <Mushroom />;
-    const corn = this.state.corn && <Corn />;
-    const veggie = this.state.veggie && <Veggie />;
+    const mushroom = this.state.mushroom && <Step2 />;
+    const corn = this.state.corn && <Step3 />;
+    const veggie = this.state.veggie && <Step4 />;
 
     return (
       <div>
