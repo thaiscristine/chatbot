@@ -27,6 +27,7 @@ class Stairs extends Component {
       //practices
       economiza:false,
 
+
     };
   }
   
@@ -34,7 +35,7 @@ class Stairs extends Component {
   clickEventHandler = category => {
     if (category === "mei") {
       this.setState({
-        mei: !this.state.mei
+        mei: !this.state.mei,
       });
       console.log(this.state.zero);
     } else if (category === "micro") {
@@ -48,43 +49,42 @@ class Stairs extends Component {
     }
   };
   //store company segment here
-  //   clickEventHandler = segment => {
-  //   if (segment === "comercio") {
-  //     this.setState({
-  //       mei: !this.state.comercio
-  //     });
-  //   } else if (segment === "industria") {
-  //     this.setState({
-  //       micro: !this.state.industria
-  //     });
-  //   } else {
-  //     this.setState({
-  //       media: !this.state.servicos
-  //     });
-  //   }
-  // };
-    //the quiz that determines good financial health.
-  // //correct answer will fill up one bar
-  //   clickEventHandler = practices => {
-  //   if (practices === "economiza") {
-  //     this.setState({
-  //       mei: !this.state.economiza
-  //     });
-  //   } else if (practices === "micro") {
-  //     this.setState({
-  //       micro: !this.state.micro
-  //     });
-  //   } else {
-  //     this.setState({
-  //       media: !this.state.media
-  //     });
-  //   }
-  // };
+    clickEventHandler = segment => {
+    if (segment === "comercio") {
+      this.setState({
+        mei: !this.state.comercio
+      });
+    } else if (segment === "industria") {
+      this.setState({
+        micro: !this.state.industria
+
+      });
+    } else {
+      this.setState({
+        media: !this.state.servicos
+      });
+    }
+  };
+    //this quiz determines good financial health.
+  //correct answer gives you one point,up to 10
+  //scored stored separately
+    clickEventHandler = practices => {
+    if (practices === "economiza") {
+      this.setState({
+        mei: !this.state.economiza
+      });
+    } else if (practices === "micro") {
+      this.setState({
+        micro: !this.state.micro
+      });
+    } else {
+      this.setState({
+        media: !this.state.media
+      });
+    }
+  };
 
   render() {
-
-    console.log( this.state.zero);
-    const zero = this.state.zero && <Step0 />;
     const mei = this.state.mei && <Step1 />;
     const micro = this.state.micro && <Step2 />;
     const corn = this.state.corn && <Step3 />;

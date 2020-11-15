@@ -110,15 +110,26 @@ function CustomChatbot(props) {
        trigger: "resposta renda"
     },
       //(precisa ajeitar para só deixar user digitar números)
+      // precisa ajeitar para dar a renda pos ou neg
       {
        id: "resposta renda",
        user: true,
-       trigger: "checar renda"
+          trigger: "renda positiva"
     },
       {
-       id: "checar renda",
-       message: "{previousValue}",
+       id: "renda positiva",
+       message: "{previousValue}, renda positiva",
        trigger: "Done"
+    },
+      {
+       id: "renda negativa",
+       message: "{previousValue}, renda negativa",
+       trigger: "Done"
+    },
+      {
+       id: "erro renda",
+       message: "{previousValue}, não entendi. Digite somente um número, pos ou neg",
+       trigger: "perguntar renda"
     },
 
       {
