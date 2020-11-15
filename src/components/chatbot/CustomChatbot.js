@@ -143,7 +143,7 @@ function CustomChatbot(props) {
           value: 'sim',
           label: "Sim",
           trigger: () => {
-              props.eventHandler("pratica2");
+              props.eventHandler("economiza");
               return "Done"
           }
         },
@@ -157,7 +157,6 @@ function CustomChatbot(props) {
         },
       ]
     },
-
 
       {
       id: "Done",

@@ -134,6 +134,16 @@ class Stairs extends Component {
     const micro = this.state.micro && <Step1 />;
     const media = this.state.media && <Step1 />;
     const zero = this.state.zero  && <Step0/>;
+    const score = 0;
+    const pratica2 = this.state.pratica2 && <Step2/>;
+    const pratica3 = this.state.pratica2 && <Step3/>;
+    const pratica4 = this.state.pratica2 && <Step4/>;
+    const pratica5 = this.state.pratica2 && <Step5/>;
+    const pratica6 = this.state.pratica2 && <Step6/>;
+    const pratica7 = this.state.pratica2 && <Step7/>;
+    const pratica8 = this.state.pratica2 && <Step8/>;
+    const pratica9 = this.state.pratica2 && <Step9/>;
+    const pratica10 = this.state.pratica2 && <Step10/>;
 
     return (
       <div>
@@ -145,6 +155,16 @@ class Stairs extends Component {
               {micro}
               {media}
               {zero}
+              {pratica2}
+              {pratica3}
+              {pratica4}
+              {pratica5}
+              {pratica6}
+              {pratica7}
+              {pratica8}
+              {pratica9}
+              {pratica10}
+
             </div>
           </div>
           <ButtonGroup eventHandler={this.clickEventHandler} />
