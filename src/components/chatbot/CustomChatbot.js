@@ -26,7 +26,7 @@ function CustomChatbot(props) {
   const steps = [
     {
        id: "Saudações",
-       message: "Olá, sou a  LIA[...]",
+       message: "Olá, sou a LIA[...]",
        trigger: "Perguntar categoria"
     },
     {
@@ -57,7 +57,7 @@ function CustomChatbot(props) {
           value: "media",
           label: "Média",
           trigger: () => {
-              props.eventHandler("média");
+              props.eventHandler("media");
               return "perguntar ramo"
           }
         }
@@ -75,24 +75,33 @@ function CustomChatbot(props) {
         {
           value: 'comercio',
           label: "Comércio",
-          trigger: "programa"
+          trigger: () => {
+              props.eventHandler("comercio");
+              return "programa"
+          }
         },
         {
           value: "industria",
           label: "indústria",
-          trigger: "programa"
+          trigger: () => {
+              props.eventHandler("industria");
+              return "programa"
+          }
         },
            {
           value: "servicos",
           label: "serviços",
-          trigger: "programa"
+          trigger: () => {
+              props.eventHandler("servicos");
+              return "programa"
+          }
         }
       ]
     },
 
       {
        id: "programa",
-       message: "{previousValue}, Vamos montar a estrategia agora[...]",
+       message: "{previousValue}, Vamos começar montar a estrategia agora[...]",
        trigger: "perguntar renda"
     },
       {

@@ -14,38 +14,77 @@ class Stairs extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tomato: false,
-      mushroom: false,
-      veggie: false,
-      corn: false
+      //category
+      mei: false,
+      micro: false,
+      media: false,
+      //segment
+      comercio: false,
+      industria: false,
+      servicos: false,
+      //practices
+      economiza:false,
+
     };
   }
-
-  clickEventHandler = decision => {
-    if (decision === "tomato") {
+// store company category here
+  clickEventHandler = category => {
+    if (category === "mei") {
       this.setState({
-        tomato: !this.state.tomato
+        mei: !this.state.mei
       });
-    } else if (decision === "mushroom") {
+    } else if (category === "micro") {
       this.setState({
-        mushroom: !this.state.mushroom
-      });
-    } else if (decision === "corn") {
-      this.setState({
-        corn: !this.state.corn
+        micro: !this.state.micro
       });
     } else {
       this.setState({
-        veggie: !this.state.veggie
+        media: !this.state.media
+      });
+    }
+  };
+  //store company segment here
+    clickEventHandler = segment => {
+    if (segment === "comercio") {
+      this.setState({
+        mei: !this.state.comercio
+      });
+    } else if (segment === "industria") {
+      this.setState({
+        micro: !this.state.industria
+
+      });
+    } else {
+      this.setState({
+        media: !this.state.servicos
+      });
+    }
+  };
+    //the quiz that determines good financial health.
+  //correct answer will fill up one bar
+    clickEventHandler = practices => {
+    if (practices === "economiza") {
+      this.setState({
+        mei: !this.state.economiza
+      });
+    } else if (practices === "micro") {
+      this.setState({
+        micro: !this.state.micro
+      });
+    } else {
+      this.setState({
+        media: !this.state.media
       });
     }
   };
 
+
+
   render() {
-    const tomato = this.state.tomato && <Step1 />;
-    const mushroom = this.state.mushroom && <Step2 />;
+    const mei = this.state.mei && <Step1 />;
+    const micro = this.state.micro && <Step2 />;
     const corn = this.state.corn && <Step3 />;
-    const veggie = this.state.veggie && <Step4 />;
+    const media = this.state.media && <Step4 />;
 
     return (
       <div>
@@ -53,10 +92,10 @@ class Stairs extends Component {
           <div className="d-flex justify-content-center">
             <div className="plate">
               <Base />
-              {tomato}
-              {mushroom}
+              {mei}
+              {micro}
               {corn}
-              {veggie}
+              {media}
             </div>
           </div>
           <ButtonGroup eventHandler={this.clickEventHandler} />

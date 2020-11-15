@@ -50,7 +50,7 @@ function CustomChatbot(props) {
         {
           value: "pizza",
           label: "Pizza",
-          trigger: "Asking for Tomatoes in Pizza"
+          trigger: "Asking for meies in Pizza"
         },
         { 
           value: "burger",
@@ -70,7 +70,7 @@ function CustomChatbot(props) {
         {
           value: true,
           label: "Yes",
-          trigger: "Asking for Tomatoes in Pizza"
+          trigger: "Asking for meies in Pizza"
         },
         { 
           value: "false",
@@ -80,43 +80,43 @@ function CustomChatbot(props) {
       ]
     },
     {
-       id: "Asking for Tomatoes in Pizza",
-       message: "Would you like to have tomatoes in your pizza",
-       trigger: "Adding Tomatoes in Pizza"
+       id: "Asking for meies in Pizza",
+       message: "Would you like to have meies in your pizza",
+       trigger: "Adding meies in Pizza"
     },
     {
-       id: "Adding Tomatoes in Pizza",
+       id: "Adding meies in Pizza",
        options: [
         {
           value: true,
           label: "Yes",
           trigger: () => {
-              props.eventHandler("tomato");
-              return "Asking for Mushroom in Pizza"  
+              props.eventHandler("mei");
+              return "Asking for micro in Pizza"
             }
         },
         { 
           value: "false",
           label: "No",
-          trigger: "Asking for Mushroom in Pizza"
+          trigger: "Asking for micro in Pizza"
         } 
       ]
     },
     
     {
-       id: "Asking for Mushroom in Pizza",
-       message: "Would you like to have mushroom in your pizza",
-       trigger: "Adding Mushroom in Pizza"
+       id: "Asking for micro in Pizza",
+       message: "Would you like to have micro in your pizza",
+       trigger: "Adding micro in Pizza"
     },
 
     {
-       id: "Adding Mushroom in Pizza",
+       id: "Adding micro in Pizza",
        options: [
         {
           value: true,
           label: "Yes",
           trigger: () => {
-              props.eventHandler("mushroom");
+              props.eventHandler("micro");
               return "Asking for Corn in Pizza"  
             }
         },
@@ -141,31 +141,31 @@ function CustomChatbot(props) {
             label: "Yes",
             trigger: () => {
                 props.eventHandler("corn");
-                return "Asking for Veggies in Pizza"  
+                return "Asking for medias in Pizza"
               }
           },
           { 
             value: "false",
             label: "No",
-            trigger: "Asking for Veggies in Pizza"
+            trigger: "Asking for medias in Pizza"
           } 
       ]
     },
      
     {
-       id: "Asking for Veggies in Pizza",
-       message: "Would you like to have veggies in your pizza",
-       trigger: "Adding Veggies in Pizza"
+       id: "Asking for medias in Pizza",
+       message: "Would you like to have medias in your pizza",
+       trigger: "Adding medias in Pizza"
     },
 
     {
-      id: "Adding Veggies in Pizza",
+      id: "Adding medias in Pizza",
       options: [
       {
           value: true,
           label: "Yes",
           trigger: () => {
-              props.eventHandler("veggie");
+              props.eventHandler("media");
               return "Done"  
             }
         },
