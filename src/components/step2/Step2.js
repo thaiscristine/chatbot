@@ -1,10 +1,12 @@
 import React from "react";
-import { Step2BarStyle } from './style';
+import { Avatar2, Step1BarStyle, Step1_5BarStyle } from '../elements/style';
 
 function Step2() {
   return (
     <div>
-        <Step2BarStyle />
+        <Avatar2 />
+        <Step1BarStyle />
+        <Step1_5BarStyle />
     </div>
   );
 }
