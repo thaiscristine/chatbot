@@ -7,6 +7,13 @@ import Step1 from "../step1/Step1";
 import Step2 from "../step2/Step2";
 import Step3 from "../step3/Step3";
 import Step4 from "../step4/Step4";
+import Step5 from "../step5/Step5";
+import Step6 from "../step6/Step6";
+import Step7 from "../step7/Step7";
+import Step8 from "../step8/Step8";
+import Step9 from "../step9/Step9";
+import Step10 from "../step10/Step10";
+
 import ButtonGroup from "../buttonGroup/ButtonGroup";
 
 import CustomChatbot from "../chatbot/CustomChatbot";
@@ -26,11 +33,18 @@ class Stairs extends Component {
       servicos: false,
       //practices
       economiza:false,
-
-
+      pratica2:false,
+      pratica3:false,
+      pratica4:false,
+      pratica5:false,
+      pratica6:false,
+      pratica7:false,
+      pratica8:false,
+      pratica9:false,
+      pratica10:false,
     };
   }
-  
+
 // store company category here
   clickEventHandler = category => {
     if (category === "mei") {
@@ -73,22 +87,53 @@ class Stairs extends Component {
       this.setState({
         mei: !this.state.economiza
       });
-    } else if (practices === "micro") {
+    } if (practices === "pratica2") {
       this.setState({
-        micro: !this.state.micro
+        pratica2: !this.state.pratica2
+      });
+          } if (practices === "pratica3") {
+      this.setState({
+        pratica3: !this.state.pratica3
+      });    } if (practices === "pratica4") {
+      this.setState({
+        pratica4: !this.state.pratica4
+      });
+    } if (practices === "pratica5") {
+      this.setState({
+        pratica5: !this.state.pratica5
+      });
+          } if (practices === "pratica6") {
+      this.setState({
+        pratica6: !this.state.pratica2
+      });
+    } if (practices === "pratica7") {
+      this.setState({
+        pratica7: !this.state.pratica2
+      });
+    } if (practices === "pratica8") {
+      this.setState({
+        pratica8: !this.state.pratica2
+      });
+    } if (practices === "pratica9") {
+      this.setState({
+        pratica9: !this.state.pratica2
+      });
+    } if (practices === "pratica10") {
+      this.setState({
+        pratica10: !this.state.pratica2
       });
     } else {
       this.setState({
-        media: !this.state.media
+        zero: !this.state.zero
       });
     }
   };
 
   render() {
     const mei = this.state.mei && <Step1 />;
-    const micro = this.state.micro && <Step2 />;
-    const corn = this.state.corn && <Step3 />;
-    const media = this.state.media && <Step4 />;
+    const micro = this.state.micro && <Step1 />;
+    const media = this.state.media && <Step1 />;
+    const zero = this.state.zero  && <Step0/>;
 
     return (
       <div>
@@ -96,11 +141,10 @@ class Stairs extends Component {
           <div className="d-flex justify-content-center">
             <div className="plate">
               <Base />
-              {zero}
               {mei}
               {micro}
-              {corn}
               {media}
+              {zero}
             </div>
           </div>
           <ButtonGroup eventHandler={this.clickEventHandler} />
