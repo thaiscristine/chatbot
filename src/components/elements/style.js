@@ -18,7 +18,7 @@ export const Step1BarStyle = styled.div`
   left: 37px;
 `;
 
-export const Step1_5BarStyle = styled.div`
+export const Step2BarStyle = styled.div`
   width: 37px;
   height: 55px;
   border-radius: 4px;
@@ -29,7 +29,7 @@ export const Step1_5BarStyle = styled.div`
 `;
 
 
-export const Step2BarStyle = styled.div`
+export const Step3BarStyle = styled.div`
   width: 37px;
   height: 85px;
   border-radius: 4px;
@@ -39,7 +39,7 @@ export const Step2BarStyle = styled.div`
   left: 107px;
 `;
 
-export const Step3BarStyle = styled.div`
+export const Step4BarStyle = styled.div`
   width: 37px;
   height: 129px;
   border-radius: 4px;
@@ -49,7 +49,7 @@ export const Step3BarStyle = styled.div`
   left: 178px;
 `;
 
-export const Step4BarStyle = styled.div`
+export const Step5BarStyle = styled.div`
   width: 37px;
   height: 166px;
   border-radius: 4px;
