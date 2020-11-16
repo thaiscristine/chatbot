@@ -210,7 +210,7 @@ function CustomChatbot(props) {
 
       {
       id: "acabou",
-      message: "😂😂😂😂 se vira ae mano kkkkk 😂😂😂😂",
+      message: "Você completou a análise! ✨ Clique para melhorar a saúde financeira da sua empresa!",
       end: true
     }
   ];

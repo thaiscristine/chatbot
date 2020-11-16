@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Base from "../base/Base";
 import Welcome from "../welcome/welcome";
 import Step1 from "../step1/Step1";
-import Step2 from "../step2/Step2";
+// import Step2 from "../step2/Step2";
 import Step3 from "../step3/Step3";
 import Step4 from "../step4/Step4";
 import Step5 from "../step5/Step5";
@@ -77,18 +77,20 @@ class Stairs extends Component {
       });
     }
   };
-  //this quiz determines good financial health.
-    // correct answer gives you one point,up to 10
-   //scored stored separately
+  // this quiz determines good financial health.
+  //   correct answer gives you one point,up to 10
+  //  scored stored separately
 
      clickEventHandler = practices => {
        if (practices === "economiza") {
          this.setState({
-           mei: !this.state.economiza});
+           mei: !this.state.economiza,
+           welcome: !this.state.welcome
+          })
        }
        if (practices === "pratica2") {
          this.setState({
-           pratica2: !this.state.pratica2
+           pratica2: !this.state.pratica2,
          });
        }
        if (practices === "pratica3") {
@@ -112,7 +114,7 @@ class Stairs extends Component {
 
     const mei = (this.state.mei || this.state.micro || this.state.media) && <Step1 />;
     const welcome = this.state.welcome && <Welcome />;
-    const industria = (this.state.industria || this.state.servicos || this.state.comercio) && <Step2 />;
+    // const industria = (this.state.industria || this.state.servicos || this.state.comercio) && <Step2 />;
     const pratica2 = this.state.pratica2 && <Step3/>;
     const pratica3 = this.state.pratica3 && <Step4/>;
     const pratica4 = this.state.pratica4 && <Step5/>;
@@ -126,7 +128,7 @@ class Stairs extends Component {
               <Base />
               {welcome}
               {mei}
-              {industria}
+              {/* {industria} */}
               {pratica2}
               {pratica3}
               {pratica4}
