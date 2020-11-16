@@ -39,7 +39,7 @@ function CustomChatbot(props) {
        options: [
         {
           value: "mei",
-          label: "Mei",
+          label: "MEI",
           trigger: "perguntar ramo mei"
         },
         {

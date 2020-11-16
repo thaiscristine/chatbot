@@ -40,17 +40,17 @@ class Stairs extends Component {
     if (category === "mei") {
       this.setState({
         mei: !this.state.mei,
-        welcome: !this.state.welcome,
+        welcome: false
       });
     } else if (category === "micro") {
       this.setState({
         micro: !this.state.micro,
-        welcome: !this.state.welcome
+        welcome: false
       });
     } else if (category === "media") {
       this.setState({
         media: !this.state.media,
-        welcome: !this.state.welcome
+        welcome: false
       });
     }
     if (category === "comercio") {
@@ -85,27 +85,31 @@ class Stairs extends Component {
        if (practices === "economiza") {
          this.setState({
            mei: !this.state.economiza,
-           welcome: !this.state.welcome
+           welcome: false
           })
        }
        if (practices === "pratica2") {
          this.setState({
            pratica2: !this.state.pratica2,
+           mei: false,
          });
        }
        if (practices === "pratica3") {
          this.setState({
-           pratica3: !this.state.pratica3
+           pratica3: !this.state.pratica3,
+           pratica2: false,
          });
        }
        if (practices === "pratica4") {
          this.setState({
-             pratica4: !this.state.pratica4
+             pratica4: !this.state.pratica4,
+             pratica3: false,
          });
       }
        if (practices === "pratica5") {
          this.setState({
-           pratica5: !this.state.pratica5
+           pratica5: !this.state.pratica5,
+           pratica4: false,
          });
        }
    };

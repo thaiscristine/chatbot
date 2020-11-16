@@ -8,7 +8,7 @@ export const Content = styled.div`
     position: absolute;
     top: -120px;
     left: -20%;
-    background: #ccc;
+    background: #F9F9F9;
     width: 800px;
     height: 420px;
     border-radius: 50px;
