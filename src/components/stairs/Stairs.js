@@ -143,12 +143,6 @@ class Stairs extends Component {
               {pratica3}
               {pratica4}
               {pratica5}
-              {pratica6}
-              {pratica7}
-              {pratica8}
-              {pratica9}
-              {pratica10}
-
             </div>
           </div>
           {/* <ButtonGroup eventHandler={this.clickEventHandler} /> */}
