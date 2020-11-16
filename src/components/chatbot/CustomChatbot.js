@@ -217,7 +217,7 @@ function CustomChatbot(props) {
   
   return (
   <ThemeProvider theme={theme}>
-    <ChatBot steps={steps} {...config} />;
+    <ChatBot steps={steps} {...config} />
   </ThemeProvider>
   )
 }
