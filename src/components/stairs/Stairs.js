@@ -19,6 +19,7 @@ import Step10 from "../step10/Step10";
 
 import CustomChatbot from "../chatbot/CustomChatbot";
 
+
 class Stairs extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +34,7 @@ class Stairs extends Component {
       comercio: false,
       industria: false,
       servicos: false,
-      //practices
+      //practices (TODO: FIX THIS MESS)
       economiza:false,
       pratica2:false,
       pratica3:false,
@@ -44,6 +45,8 @@ class Stairs extends Component {
       pratica8:false,
       pratica9:false,
       pratica10:false,
+      //score
+      score: 0
     };
   }
 
@@ -176,12 +179,6 @@ class Stairs extends Component {
               {pratica3}
               {pratica4}
               {pratica5}
-              {pratica6}
-              {pratica7}
-              {pratica8}
-              {pratica9}
-              {pratica10}
-
             </div>
           </div>
           {/* <ButtonGroup eventHandler={this.clickEventHandler} /> */}

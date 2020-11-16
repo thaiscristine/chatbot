@@ -75,7 +75,7 @@ function CustomChatbot(props) {
         { 
           value: "false",
           label: "No",
-          trigger: "Done"
+          trigger: "acabou"
         } 
       ]
     },
@@ -166,18 +166,18 @@ function CustomChatbot(props) {
           label: "Yes",
           trigger: () => {
               props.eventHandler("media");
-              return "Done"  
+              return "acabou"
             }
         },
         { 
           value: "false",
           label: "No",
-          trigger: "Done"
+          trigger: "acabou"
         } 
       ]
     },
     {
-      id: "Done",
+      id: "acabou",
       message: "Have a great day !!",
       end: true
     }

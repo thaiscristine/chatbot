@@ -143,17 +143,17 @@ function CustomChatbot(props) {
         {
           value: 'comercio',
           label: "Comércio",
-          trigger: "Done"
+          trigger: "acabou"
         },
         {
           value: "industria",
           label: "industria",
-          trigger: "Done"
+          trigger: "acabou"
         },
            {
           value: "servicos",
           label: "serviços",
-          trigger: "Done"
+          trigger: "acabou"
         }
       ]
     },
@@ -161,7 +161,7 @@ function CustomChatbot(props) {
 
 
       {
-      id: "Done",
+      id: "acabou",
       message: "Tenha um ótimo dia",
       end: true
     }
