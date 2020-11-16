@@ -124,7 +124,7 @@ function CustomChatbot(props) {
       {
        id: "renda negativa",
        message: "{previousValue}, renda negativa",
-       trigger: "Done"
+       trigger: "acabou"
     },
       {
        id: "erro renda",
@@ -144,23 +144,73 @@ function CustomChatbot(props) {
           label: "Sim",
           trigger: () => {
               props.eventHandler("economiza");
-              return "Done"
+              return "pergunta saude financeira 2"
           }
         },
         {
           value: "nao",
           label: "Não",
           trigger: () => {
-              props.eventHandler("zero");
-              return "Done"
+              return "acabou"
           }
         },
       ]
     },
 
       {
-      id: "Done",
-      message: "😂😂😂😂 se vira ae falido kkkkk 😂😂😂😂",
+       id: "pergunta saude financeira 2",
+       message: "pergunta saude financeira 2?",
+       trigger: "resposta 2"
+    },
+      {
+       id: "resposta 2",
+       options: [
+        {
+          value: 'sim',
+          label: "Sim",
+          trigger: () => {
+              props.eventHandler("pratica2");
+              return "pergunta saude financeira 3"
+          }
+        },
+        {
+          value: "nao",
+          label: "Não",
+          trigger: () => {
+              return "acabou"
+          }
+        },
+      ]
+    },
+            {
+       id: "pergunta saude financeira 3",
+       message: "pergunta saude financeira 3?",
+       trigger: "resposta 3"
+    },
+      {
+       id: "resposta 3",
+       options: [
+        {
+          value: 'sim',
+          label: "Sim",
+          trigger: () => {
+              props.eventHandler("pratica3");
+              return "acabou"
+          }
+        },
+        {
+          value: "nao",
+          label: "Não",
+          trigger: () => {
+              return "acabou"
+          }
+        },
+      ]
+    },
+
+      {
+      id: "acabou",
+      message: "😂😂😂😂 se vira ae mano kkkkk 😂😂😂😂",
       end: true
     }
   ];
