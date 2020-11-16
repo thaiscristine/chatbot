@@ -212,7 +212,8 @@ function CustomChatbot(props) {
       id: "acabou",
       message: "Você completou a análise! ✨ Clique para melhorar a saúde financeira da sua empresa!",
       end: true
-    }
+    },
+     
   ];
   
   return (
