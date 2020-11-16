@@ -3,19 +3,12 @@ import "./Stairs.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Base from "../base/Base";
 import Welcome from "../welcome/welcome";
-// import Step0 from "../step0/Step0";
 import Step1 from "../step1/Step1";
 import Step2 from "../step2/Step2";
 import Step3 from "../step3/Step3";
 import Step4 from "../step4/Step4";
 import Step5 from "../step5/Step5";
 import Step6 from "../step6/Step6";
-import Step7 from "../step7/Step7";
-import Step8 from "../step8/Step8";
-import Step9 from "../step9/Step9";
-import Step10 from "../step10/Step10";
-
-// import ButtonGroup from "../buttonGroup/ButtonGroup";
 
 import CustomChatbot from "../chatbot/CustomChatbot";
 
@@ -39,11 +32,6 @@ class Stairs extends Component {
       pratica3:false,
       pratica4:false,
       pratica5:false,
-      pratica6:false,
-      pratica7:false,
-      pratica8:false,
-      pratica9:false,
-      pratica10:false,
     };
   }
 
@@ -145,8 +133,6 @@ class Stairs extends Component {
               {pratica5}
             </div>
           </div>
-          {/* <ButtonGroup eventHandler={this.clickEventHandler} /> */}
-
           <CustomChatbot eventHandler={this.clickEventHandler} />
         </div>
       </div>
