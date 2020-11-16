@@ -21,19 +21,23 @@ export const Content = styled.div`
 
         a { 
             align-self: flex-start;
-            padding: 30px 0;
+            padding: 30px 20px;
         }
         h1{ 
-            font-family: 'bc-novatica-cyr,  sans-serif';
+            /* font-family: 'bc-novatica-cyr,  sans-serif'; */
             align-self: flex-start;
-            padding: 30px 0;
+            padding: 30px 20px;
             color: #336195;
+        }
+        svg {
+            margin-left: 5px;
         }
         img { 
            padding: 40px;
        }
        p {
-        padding-right: 40px;
+
+            padding: 0 60px 0 20px;;
        }
     }
 `;
